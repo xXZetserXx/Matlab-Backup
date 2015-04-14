@@ -27,21 +27,21 @@ for n = 1:1800
 end
 
 %%%%%%%plot Torque Vs Speed
-plot(NM,T1,'DisplayName','100% Voltage');
+plot(RPM_range,T1,'DisplayName','100% Voltage');
 hold on
-plot(NM,T2,'Color',[0 1 0],'DisplayName','90% Voltage')
-plot(NM,T3,'Color',[1 0 0],'DisplayName','80% Voltage')
+plot(RPM_range,T2,'Color',[0 1 0],'DisplayName','90% Voltage')
+plot(RPM_range,T3,'Color',[1 0 0],'DisplayName','80% Voltage')
 xlabel({'Machine Speed (RPM)'});
-ylabel({'Torque (NM)'});
+ylabel({'Torque (RPM_range)'});
 title({'Torque Vs. Speed'});
 legend('show');
 
 %%%% plot Current Vs Speed
 figure
-plot(NM,I1,'DisplayName','100% Voltage')
+plot(RPM_range,I1,'DisplayName','100% Voltage')
 hold on
-plot(NM,I2,'Color',[0 1 0],'DisplayName','90% Voltage')
-plot(NM,I3,'Color',[1 0 0],'DisplayName','80% Voltage')
+plot(RPM_range,I2,'Color',[0 1 0],'DisplayName','90% Voltage')
+plot(RPM_range,I3,'Color',[1 0 0],'DisplayName','80% Voltage')
 xlabel({'Machine Speed (RPM)'});
 ylabel({'Current (Amps)'});
 title({'Current Vs. Speed'});
