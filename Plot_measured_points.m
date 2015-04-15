@@ -15,10 +15,14 @@ RPM3 = [1685 1677 1670 1662 1653 1645 1637];
 T3 = [1.05 1.11 1.18 1.23 1.15 1.21 1.22];
 
 figure
-plot(I, RPM1, I, RPM2, I, RPM3)
-xlabel('Current I1 (A)')
-ylabel('Speed (RPM)')
-figure
-plot(I, T1, I, T2, I, T3)
-xlabel('Current I1 (A)')
-ylabel('Torque')
+subplot(2,1,1)
+plot(RPM1,T1, RPM2,T2, RPM3,T3)
+xlabel('Rotor Speed (RPM)')
+ylabel('Torque (NM)')
+legend('100% Voltage', '90% Voltage', '80% Voltage')
+
+subplot(2,1,2)
+plot(RPM1,I, RPM2,I, RPM3,I)
+xlabel('Rotor Speed (RPM)')
+ylabel('Current (A)')
+legend('100% Voltage', '90% Voltage', '80% Voltage')
