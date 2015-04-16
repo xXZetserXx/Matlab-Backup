@@ -1,6 +1,10 @@
 function [ output_args ] = motor_curves(R1, X1, Xm, Rc)
 %Calculate and output the Induction motor curves as functions of R1, R2,
 %X1, X2, Xm, and Rc
+% R1 = 6.71
+% X1 = 4.94
+% Rc = 494.962 
+% Xm = 134.434
 
 R2 = R1;
 X2 = X1;
